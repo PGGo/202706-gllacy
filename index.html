@@ -5,8 +5,188 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
+    <header class="main-header">
+      <div class="container">
+        <img src="img/" alt="Gllacy Shop" width="" height=""/>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="#">Каталог</a>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-buying">
+          <form class="search-form" action="index.html" method="post">
+            <label>
+              <input type="text" name="search" placeholder="">
+            </label>
+          </form>
+          <!-- Блоки или ссылки, которые потом сделать блочным элементов?
+          Ведь дейтсвие происходит при нажатии не только на текст, но и на область вокруг него  -->
+          <div class="header-login">
+            Вход
+          </div>
+          <div class="header-basket">
+            Пусто
+          </div>
+        </div>
+        <div class="header-info">
+          <span class="worktime">С 10 до 20, ежедневно</span>
+          <span class="phone">8 812 450-25-25</span>
+        </div>
+      </div>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <main class="container">
+      <!-- Картинка с мороженым - картинка или фон?
+      По идее картинка, ведь там же слайдер? И если слайдер, то
+      оборачивать в тег figure? А также текст "Крем-брюле.."  можно сделать прям
+     на картинке ее частью или нужно именно в виде текста?
+      А также ссылка "давайте оба" относится к слайдеру или отдельно?-->
+      <div class="main-slider">
+        <img src="img/" alt="Мороженое" width="" height=""/>
+        <a class="btn" href="#">Давайте оба!</a>
+      </div>
+      <div class="discounts">
+        <article class="discounts-rasberry info-block">
+          <!-- Подойдет же h2? -->
+          <h2>Малинка даром!</h2>
+          <p>
+            При покупке 2кг любого фруктового мороженого, добавим
+            в ваш заказ банку малинового варенья бесплатно.
+          </p>
+          <a class="btn" href="#">Хочу варенье!</a>
+        </article>
+        <article class="discount-chocolate info-block">
+          <h2>Шоколадки даром!</h2>
+          <p>
+            При покупке 2кг пломбира, добавим в ваш заказ упаковку
+            вкуснейшей шоколадной присыпки совершенно бесплатно.
+          </p>
+          <a class="btn" href="#">Хочу шоколадки!</a>
+        </article>
+      </div>
+      <div class="icecream">
+        <!-- section или article? -->
+        <article class="icecream-item">
+          <img src="img/" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="" height=""/>
+          <span>310 &#8381;/кг</span>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        </article>
+        <article class="icecream-item">
+          <img src="img/" alt="Сливочно-кофейное с кусочками шоколада" width="" height=""/>
+          <span>380 &#8381;/кг</span>
+          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+        </article>
+        <article class="icecream-item">
+          <img src="img/" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="" height=""/>
+          <span>355 &#8381;/кг</span>
+          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        </article>
+        <article class="icecream-item">
+          <img src="img/" alt="Сливочное крем-брюле с карамельной подливкой" width="" height=""/>
+          <span>415 &#8381;/кг</span>
+          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+        </article>
+      </div>
+      <div class="shop-description">
+        <!-- Можно ли сделать тут h1? -->
+        <h1>Магазин Глейси &ndash; это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
+        <p>
+          Все наше мороженое изготавливается на собственном производстве, с использованием
+          современного оборудования и проверенных временем технологий.
+        </p>
+        <p>
+          Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний,
+          с которыми нас связывает долговременное сотрудничество.
+        </p>
+        <p>
+          Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+          Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.
+        </p>
+        <p>
+          Доставка нашего мороженого от заказчиков осуществляется в специальном термопаке,
+          который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
+        </p>
+      </div>
+      <div class="news-subscribe">
+        <article class="news info-block">
+          <!-- Делать как заголовок? -->
+          <p>
+            Новое в нашем блоге
+          </p>
+          <a href="#">
+            10 способов сервировки фруктовых щербетов к столу
+          </a>
+        </article>
+        <article class="subscribe info-block">
+          <p>
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что
+            у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <form class="subscribe-form" action="index.html" method="post">
+            <input type="text" name="email" placeholder="Электронная почта">
+            <button class="btn" type="submit" name="button">Отправить</button>
+          </form>
+        </article>
+      </div>
+      <div class="map-contacts">
+        <!-- Карта картинкой или фоном? -->
+        <img src="img/" alt="Большая Конюшенная 19/8" width="" height=""/>
+        <div class="contacts-feedback">
+          <p class="contacts-title">
+            Адрес главного офиса и офлайн магазина:
+          </p>
+          <p class="contacts-info">
+            ул. Большая Конюшенная 19/8, Санкт-Петербург
+          </p>
+          <p class="contacts-title">
+            Для заказов по телефону:
+          </p>
+          <p class="contacts-info">
+            8 812 450-25-25
+          </p>
+          <p class="contacts-title">
+            (с 10 до 20 ежедневно)
+          </p>
+          <a class="btn" href="#">Форма обратной связи</a>
+        </div>
+      </div>
+    </main>
 
+    <footer class="main-footer">
+      <div class="container">
+        <section class="footer-social">
+          <a class="btn social-btn" href="#">Твиттер</a>
+          <a class="btn social-btn" href="#">Инстаграм</a>
+          <a class="btn social-btn" href="#">Фейсбук</a>
+          <a class="btn social-btn" href="#">Вконтакте</a>
+        </section>
+        <section class="footer-links">
+          <div class="footer-links-item">
+            <a class="footer-link-suppliers" href="#"></a>
+            <a href="#"></a>
+          </div>
+          <div class="footer-links-item">
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+        </section>
+        <section class="footer-copyright">
+          <a href="https://htmlacademy.ru">
+            <img src="img/" alt="HTML Academy" width="" height=""/>
+          </a>
+          <p>
+            Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
+          </p>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
