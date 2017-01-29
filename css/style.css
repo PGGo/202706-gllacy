@@ -1,23 +1,286 @@
 body {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: normal;
-  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+
   color: #323232;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
 }
 
 h1 {
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: bold;;
-  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+
   color: #ffffff;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 60px;;
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: bold;
-  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+
   color: #323232;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.main-header {
+  width: 1200px;
+  min-height: 80px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  background-color: rgba(148, 97, 65, 0.19);
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0;
+
+  background-color: rgba(65, 148, 108, 0.19);
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+
+  content: "";
+}
+
+.header-nav {
+  float: left;
+
+  width: 550px;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+
+  background-color: rgba(112, 47, 80, 0.31);
+}
+
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header-buying {
+  float: right;
+
+  width: 267px;
+
+  font-size: 0px;
+}
+
+.logo {
+  float: left;
+}
+
+.search-form {
+  display: inline-block;
+
+  vertical-align: top;
+
+  font-size: 14px;
+}
+
+.header-login {
+  display: inline-block;
+
+  vertical-align: top;
+
+  font-size: 14px;
+}
+
+.header-basket {
+  display: inline-block;
+
+  vertical-align: top;
+
+  font-size: 14px;
+}
+
+/* через position так как вылезает на слайдер*/
+.header-info {
+  clear: both;
+}
+
+/* Если мороженки фон, то делать min-height? */
+.header-slider {
+  width: 1146px;
+  min-height: 520px;
+}
+
+.header-slider h1 {
+  width: 775px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.header-slider a {
+  display: block;
+
+  width: 205px;
+  margin: 0 auto;
+  padding: 10px 40px;
+
+  background-color: rgba(91, 246, 142, 0.35);
+}
+
+.info-block {
+  width: 520px;
+  min-height: 190px;
+  padding: 20px;
+
+  background-color: rgba(156, 3, 154, 0.28);
+}
+
+.discounts-rasberry {
+  float: left;
+}
+
+.discount-chocolate {
+  float: right;
+}
+
+.discounts {
+  margin-bottom: 40px;
+}
+
+.icecream {
+  margin-bottom: 37px;
+
+  font-size: 0px;
+}
+
+.icecream-item {
+  display: inline-block;
+
+  width: 267px;
+  margin-right: 26px;
+
+  vertical-align: top;
+
+  font-size: 16px;
+}
+
+.icecream-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.shop-description {
+  margin-bottom: 40px;
+  padding: 20px 30px;
+
+  background-color: rgba(65, 130, 173, 0.42);
+
+  font-size: 0px;
+}
+
+.shop-description h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.shop-description ul {
+  margin: 0;
+  padding: 0;
+}
+
+.description-item {
+  display: inline-block;
+
+  width: 485px;
+  padding-top: 30px;
+  padding-left: 55px;
+
+  vertical-align: top;
+
+  background-color: rgba(228, 103, 112, 0.44);
+
+  font-size: 16px;
+}
+
+.news-subscribe {
+  margin-bottom: 40px;
+}
+
+.news {
+  float: left;
+}
+
+.subscribe {
+  float: right;
+}
+
+.map-contacts {
+  min-height: 430px;
+}
+
+.contacts-feedback {
+  float: right;
+
+  width: 302px;
+  padding: 25px 30px;
+}
+
+.main-footer {
+  margin-top: 15px;
+  padding-bottom: 25px;
+}
+
+.footer-social {
+  float: left;
+
+  width: 267px;
+  margin-right: 26px;
+}
+
+.footer-links {
+  float: left;
+
+  width: 550px;
+}
+
+.footer-copyright {
+  float: right;
+
+  width: 267px;
+}
+
+.breadcrumbs {
+  margin-bottom: 10px;
+}
+
+.title-catalog {
+  margin-bottom: 22px;
+}
+
+.filters {
+  margin-bottom: 40px;
+
+  background-color: rgba(79, 77, 199, 0.26);
+}
+
+.icecream-catalog {
+  margin-bottom: 80px;
+
+  font-size: 0px;
+}
+
+.pages {
+  float: right;
+
+  width: 267px;
 }
