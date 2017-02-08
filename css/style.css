@@ -8,6 +8,8 @@ body {
   font-size: 16px;
   font-weight: normal;
   line-height: 16px;
+  min-width: 1200px;
+  background-color: #849d8f;
 }
 
 h1 {
@@ -19,7 +21,7 @@ h1 {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 60px;
   font-weight: bold;
-  line-height: 60px;;
+  line-height: 60px;
 }
 
 h2 {
@@ -34,21 +36,25 @@ h2 {
   line-height: 24px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .main-header {
   width: 1200px;
-  min-height: 80px;
   margin: 0 auto;
-  margin-bottom: 10px;
-
-  background-color: rgba(148, 97, 65, 0.19);
+  margin-bottom: 37px;
+  padding-top: 10px;
+  padding-right: 0px;
+  position: relative;
 }
 
 .container {
   width: 1146px;
   margin: 0 auto;
-  padding: 0;
-
-  background-color: rgba(65, 148, 108, 0.19);
+  padding: 0 27px;
+  /*background-color: rgba(137, 221, 54, 0.2);*/
 }
 
 .clearfix::after {
@@ -58,74 +64,439 @@ h2 {
   content: "";
 }
 
+.main-header .container {
+  background: url("../img/slider-icecream-01.png") center -10px no-repeat;
+
+}
+
 .header-nav {
   float: left;
 
   width: 550px;
-  padding-top: 30px;
+  padding-top: 13px;
   padding-right: 25px;
-  padding-bottom: 30px;
-  padding-left: 25px;
+  padding-bottom: 23px;
+  padding-left: 11px;
+  color: #ffffff;
 
-  background-color: rgba(112, 47, 80, 0.31);
 }
 
 .header-nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.header-nav > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 7px 14px;
+  color: #ffffff;
+  border-radius: 32px;
+}
+
+.header-nav > ul > li.active-nav,
+.header-nav a.active-link {
+  background-color: #d07058;
+  color: #ffffff;
+}
+
+.header-nav > ul > li.active-nav > a {
+  border-bottom: 1px solid #d07058;
+}
+
+.header-nav > ul > li > a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  /*padding: 7px 5px; */
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", "Arial", sans-serif;
+  /*border-radius: 32px; */
+}
+
+
+/* беда что li:active а не a:active */
+.header-nav > ul > li:hover:not(.active-nav) {
+  color: #333333;
+
+  background-color: #f7f6f3;
+}
+
+.header-nav > ul > li:active:not(.active-nav) {
+  color: #333333;
+
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);
+}
+
+
+.header-nav > ul > li {
+  position: relative;
+}
+
+
+/* не всегда успеваю передвинуть мышку на всплывающее меню*/
+.header-nav .sub-menu {
+  position: absolute;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: #f8f7f4;
+  width: 143px;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  top: 37px;
+  left: -6px;
+  display: none;
+}
+
+.sub-menu a {
+  color: #323232;
+  text-decoration: none;
+  display: block;
+  padding: 8px 20px;
+
+}
+
+.header-nav > ul > li:hover:first-child .sub-menu {
+  display: block;
+}
+
+.sub-menu a:hover:not(.active-link) {
+  background-color: #fbded7;
+  border-radius: 5px;
+}
+
+.sub-menu a:active:not(.active-link) {
+  background-color: #f6b5a5;
+  border-radius: 5px;
+}
+
+.sub-menu li:first-child a {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+/* это вообще нормально так делать? */
+.sub-menu li:first-child a::after {
+  content: "";
+  width: 123px;
+  height: 1px;
+  background-color: #d1d0ce;
+  position: absolute;
+  top: 37px;
+  left: 10px;
+}
+
+.sub-menu li:last-child a {
+  padding-bottom: 10px;
+
 }
 
 .header-buying {
   float: right;
-
-  width: 267px;
+  text-align: right;
+  min-width: 267px;
 
   font-size: 0px;
+  padding-top: 13px;
+
+  padding-bottom: 23px;
+  padding-left: 20px;
+
+  position: relative;
 }
 
 .logo {
   float: left;
+  width: 154px;
+  height: 64px;
+  margin-left: -1px;
 }
+
+.header-search {
+  display: inline-block;
+  vertical-align: top;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -32px -193px;
+  margin-right: 10px;
+}
+
+.header-search:hover {
+  background-color: rgba(255, 255, 255, 1);
+  background-position: -69px -193px;
+}
+
+
 
 .search-form {
-  display: inline-block;
+  display: none;
 
   vertical-align: top;
-
+text-align: left;
   font-size: 14px;
+  position: absolute;
+  padding: 20px 15px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  z-index: 101;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  right: 228px;
+  top: 50px;
+  width: 310px;
 }
+
+/* быстро пропадает */
+.header-search:hover + .search-form {
+  display: block;
+}
+
+.main-header input[type="text"],
+.main-header input[type="password"] {
+  box-sizing: border-box;
+  padding: 9px 15px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  margin: 0;
+  width: 100%;
+}
+
+
+.main-header  input[type="text"]:hover,
+.main-header input[type="password"]:hover {
+  border: 2px solid #d3d3d2;
+  padding: 8px 14px;
+}
+
+/* голубое свечеие в хроме */
+.main-header  input[type="text"]:focus,
+.main-header input[type="password"]:focus {
+  border: 2px solid #8fbdec;
+  padding: 8px 14px;
+}
+
+.main-header label {
+  color: #5b9ddf;
+  margin: 0px;
+  padding: 0px;
+  display: none;
+}
+
+.main-header input::-webkit-input-placeholder {
+  font-weight: normal;
+}
+
+.main-header input:-moz-placeholder {
+
+  font-weight: normal;
+}
+
+
 
 .header-login {
+  position: relative;
   display: inline-block;
-
+  padding: 8px 16px;
+  padding-left: 43px;
   vertical-align: top;
-
+  color: #ffffff;
+  text-decoration: none;
   font-size: 14px;
+  line-height: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  margin-right: 10px;
+  font-weight: 500;
 }
 
-.header-basket {
-  display: inline-block;
+.header-login::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 19px;
+
+  /* можно ли указывать для иконки прозрачный фон? */
+  background: transparent url("../img/sprite.png");
+  background-position: -172px -10px;
+  left: 16px;
+  top: 6px;
+}
+
+.header-login:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232;
+}
+
+.header-login:hover::before {
+  background-position: -172px -49px;
+}
+
+.login-form {
+  display: none;
 
   vertical-align: top;
-
+  text-align: left;
   font-size: 14px;
+  position: absolute;
+  padding: 20px 19px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  z-index: 102;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  right: 123px;
+  top: 50px;
+  width: 240px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.login-form button {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 25px;
+  border-radius: 44px;
+  border: 0;
+  font-weight: bold;
+  font-family: "Roboto", "Arial", sans-serif;
+  float: left;
+
+}
+
+.login-form-links {
+  float: right;
+}
+
+.login-form a {
+  display: block;
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-login:hover + .login-form {
+  display: block;
+}
+
+
+
+.header-basket {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 34px;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+.header-basket::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 20px;
+
+  /* можно ли указывать для иконки прозрачный фон? */
+  background: transparent url("../img/sprite.png");
+  background-position: -90px -10px;
+  left: 17px;
+  top: 6px;
+}
+
+.header-basket:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #323232;
+}
+
+
+/* что с корзиной делать? */
+.header-basket:hover::before {
+  background-position: -131px -10px;
 }
 
 /* через position так как вылезает на слайдер*/
 .header-info {
-  clear: both;
+
+  width: 175px;
+  position: absolute;
+  right: 25px;
+  top: 73px;
+  color: #ffffff;
+  font-size: 0px;
+}
+
+.worktime {
+  display: inline-block;
+  vertical-align: top;
+  width: 175px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.phone {
+  display: inline-block;
+  text-align: right;
+  width: 175px;
+  vertical-align: top;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
 /* Если мороженки фон, то делать min-height? */
 .header-slider {
-  width: 1146px;
-  min-height: 520px;
+  clear: both;
+  width: 1146px;  position: relative;
+  min-height: 532px;
+
+}
+
+.slider-title-btn {
+  position: absolute;
+  top: 313px;
+  left: 233px;
 }
 
 .header-slider h1 {
-  width: 775px;
+  width: 680px;  padding: 0px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
+  text-align: center;
+
 }
 
 .header-slider a {
@@ -133,30 +504,112 @@ h2 {
 
   width: 205px;
   margin: 0 auto;
-  padding: 10px 40px;
+  padding: 10px 36px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+
 
   background-color: rgba(91, 246, 142, 0.35);
+  border-radius: 64px;
 }
+
+.btn {
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  color: #ffffff;
+  text-decoration: none;
+  /* приставки */
+  background-image: -moz-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+}
+
+
+
+.btn:hover {
+  background-image: -moz-linear-gradient(90deg, rgb(236, 111, 94) 0%, rgb(246, 134, 105) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(236, 111, 94) 0%, rgb(246, 134, 105) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(236, 111, 94) 0%, rgb(246, 134, 105) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background-image: -moz-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.4);
+}
+
 
 .info-block {
   width: 520px;
-  min-height: 190px;
-  padding: 20px;
+  border-radius: 15px;
+  /* почему при измерении в фотошопе padding'и в фш сверху и снизу 23,
+  но при этом при верстке пришлось делать разные, так как плывет иначе   */
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 23px;
 
-  background-color: rgba(156, 3, 154, 0.28);
+}
+
+.info-block h3 {
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+/* дублировать ли font-family? */
+.discounts p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 45px;
+}
+
+.discounts a {
+  float: right;
+
+}
+
+.info-block a {
+  display: inline-block;
+  vertical-align: top;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 11px 23px;
+  border-radius: 46px;
 }
 
 .discounts-rasberry {
   float: left;
+  background: #3e0001 url("../img/background-rasberry.jpg") no-repeat;
 }
+
 
 .discount-chocolate {
   float: right;
+  background: #542e18 url("../img/background-choco.jpg") no-repeat;
 }
 
 .discounts {
   margin-bottom: 40px;
 }
+
 
 .icecream {
   margin-bottom: 37px;
@@ -166,13 +619,99 @@ h2 {
 
 .icecream-item {
   display: inline-block;
-
+  position: relative;
   width: 267px;
   margin-right: 26px;
 
   vertical-align: top;
-
+  text-align: center;
   font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* принципиально ли, что рубль другой? */
+.icecream-item .price {
+  position: absolute;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  top: 210px;
+  left: 0;
+  z-index: 560;
+}
+
+.icecream-item .kilogram {
+  font-size: 30px;
+}
+
+.icecream-item img {
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 500;
+}
+
+.icecream-item .icecream-item-title {
+
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+.icecream-item .icecream-item-title:hover,
+.icecream-item .icecream-item-title:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+
+.icecream-item .btn {
+
+  width: 170px;
+  padding: 11px 15px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 46px;
+  position: absolute;
+  top: 333px;
+  left: 33px;
+  display: none;
+  z-index: 550;
+}
+
+.icecream-item:hover .btn {
+  display: inline-block;
+}
+
+/* можно ли так */
+.icecream-item:hover::before {
+  content: "";
+  position: absolute;
+  width: 293px;
+  height: 404px;
+  background-color: rgba(248, 247, 244, 0.3);
+
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  top: -6px;
+  left: -13px;
+  z-index: 50;
+
+}
+
+.icecream-item::after {
+  content: "";
+  width: 61px;
+  height: 61px;
+  background: transparent url("../img/sprite.png");
+  background-position: -130px -121px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 600;
 }
 
 .icecream-item:nth-child(4n) {
@@ -180,17 +719,26 @@ h2 {
 }
 
 .shop-description {
-  margin-bottom: 40px;
-  padding: 20px 30px;
+  margin-bottom: 40px;  padding-left: 20px;
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-bottom: 25px;
 
-  background-color: rgba(65, 130, 173, 0.42);
-
+  background: #ecdcbd url("../img/pattern-wafer.png") repeat;
+  border-radius: 15px;
   font-size: 0px;
+
+
 }
 
 .shop-description h2 {
   margin: 0;
   padding: 0;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 24px;
+  color: #323232;
+
 }
 
 .shop-description ul {
@@ -198,18 +746,74 @@ h2 {
   padding: 0;
 }
 
+
+
 .description-item {
   display: inline-block;
 
-  width: 485px;
-  padding-top: 30px;
-  padding-left: 55px;
-
+  width: 480px;
+  padding-top: 21px;
+  padding-left: 57px;
+  margin-right: 29px;
   vertical-align: top;
 
-  background-color: rgba(228, 103, 112, 0.44);
-
   font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  position: relative;
+
+}
+
+.description-item:nth-child(2n) {
+  margin-right: 0px;
+}
+
+.shop-description-technology::before {
+  content: "";
+  width: 49px;
+  height: 49px;
+  /* фон */
+  background: url("../img/sprite.png");
+  background-position: -213px -10px;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+}
+
+.shop-description-farm::before {
+  content: "";
+  width: 49px;
+  height: 49px;
+  /* фон */
+  background: url("../img/sprite.png");
+  background-position: -10px -50px;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+}
+
+.shop-description-materials::before {
+  content: "";
+  width: 49px;
+  height: 49px;
+  /* фон */
+  background: url("../img/sprite.png");
+  background-position: -211px -131px;
+  top: 10px;
+  left: 0px;
+  position: absolute;
+}
+
+.shop-description-temperature::before {
+  content: "";
+  width: 49px;
+  height: 49px;
+  /* фон */
+  background: url("../img/sprite.png");
+  background-position: -211px -200px;
+  top: 10px;
+  left: 0px;
+  position: absolute;
 }
 
 .news-subscribe {
@@ -218,45 +822,288 @@ h2 {
 
 .news {
   float: left;
+  background: #ffffff url("../img/background-strawberry.jpg") no-repeat;
+  min-height: 182px;
+  /*
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 23px; */
 }
 
-.subscribe {
+.news span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: 500;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+/* в макете после 10 два пробела, это опечатка?
+делать высоту блока с помощью margin? */
+.news a {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+  font-weight: bold;
+  text-decoration: underline;
+  border-radius: 0;
+  padding: 0px;
+  width: 290px;
+  display: block;
+  /*margin-bottom: 58px; */
+
+}
+
+.news a:hover,
+.news a:active {
+  color: #e84d37;
+}
+
+
+
+/* не разобралась с рамкой */
+.news-subscribe .subscribe {
   float: right;
+  box-sizing: border-box;
+  width: 560px;
+  background-color: #f8f7f4;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  border: 6px solid white;
+  padding-top: 12px;
+
+  padding-bottom: 35px;
 }
 
-.map-contacts {
-  min-height: 430px;
+.subscribe p {
+  margin-bottom: 34px;
+}
+
+.subscribe-form input {
+  width: 335px;
+  padding: 9px 15px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  margin-right: 9px;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.subscribe-form button {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 18px;
+  border-radius: 44px;
+  border: 0;
+  font-weight: bold;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.container .map-contacts {
+  width: 1146px;
+  padding: 62px 27px;
+
+
+  background-image: url("../img/map.png");
+  position: relative;
+  left: -27px;
 }
 
 .contacts-feedback {
   float: right;
 
-  width: 302px;
-  padding: 25px 30px;
+  width: 252px;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: #323232;
+}
+
+.contacts-title {
+  margin: 0px;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.contacts-info {
+  margin: 0px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.contacts-item {
+  margin-bottom: 19px;
+}
+
+
+.contacts-feedback a {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 27px;
+  border-radius: 44px;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
 .main-footer {
   margin-top: 15px;
   padding-bottom: 25px;
+  color: #ffffff;
 }
 
 .footer-social {
   float: left;
 
   width: 267px;
-  margin-right: 26px;
+  margin-right: 133px;
+  padding: 0px;
+
+}
+
+.social-btn {
+  font-size: 0px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  background: transparent url("../img/sprite.png") no-repeat center;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  margin-right: 8px;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+/* правильно ли вырезала кнопки */
+.social-btn:hover {
+  opacity: 1;
+}
+
+.social-btn:active {
+  opacity: 1;
+  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.4);
+}
+
+.social-btn-tw {
+  background-position: -10px -131px;
+
+}
+
+.social-btn-inst {
+  background-position: -213px -79px;
+
+}
+
+.social-btn-fb {
+  background-position: -78px -88px;
+
+}
+
+.social-btn-vk {
+  background-position: -282px -10px;
+
 }
 
 .footer-links {
   float: left;
+  font-size: 0px;
+  width: 339px;
 
-  width: 550px;
+  margin-top: 18px;
+}
+
+.footer-links-item {
+  width: 175px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 18px;
+
+  padding-left: 22px;
+  text-align: left;
+}
+
+.footer-links-item:first-child {
+  width: 120px;
+}
+
+.footer-links-item a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.footer-links-item a:hover,
+.footer-links-item a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+
+.footer-link-suppliers {
+  font-weight: bold;
+  position: relative;
+}
+
+.footer-link-suppliers::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  background: transparent url("../img/sprite.png") no-repeat center;
+  background-position: -130px -88px;
+  left: -22px;
+  top: 2px;
 }
 
 .footer-copyright {
   float: right;
+  padding-top: 2px;
+  width: 190px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 18px;
 
-  width: 267px;
+}
+
+.footer-copyright p a {
+  color: #ffffff;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copyright p a:hover,
+.footer-copyright p a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+
+.footer-copyright p {
+  margin: 0px;
+}
+
+.footer-copyright a {
+
 }
 
 .breadcrumbs {
