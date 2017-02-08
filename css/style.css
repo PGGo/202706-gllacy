@@ -41,6 +41,32 @@ img {
   height: auto;
 }
 
+.site-wrapper {
+  min-width: 1200px;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/slider-icecream-02.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/slider-icecream-03.png");
+}
+
+
+
 .main-header {
   width: 1200px;
   margin: 0 auto;
@@ -48,6 +74,7 @@ img {
   padding-top: 10px;
   padding-right: 0px;
   position: relative;
+  background-color: transparent;
 }
 
 .container {
@@ -64,10 +91,6 @@ img {
   content: "";
 }
 
-.main-header .container {
-  background: url("../img/slider-icecream-01.png") center -10px no-repeat;
-
-}
 
 .header-nav {
   float: left;
@@ -477,29 +500,30 @@ text-align: left;
   font-weight: bold;
 }
 
-/* Если мороженки фон, то делать min-height? */
-.header-slider {
-  clear: both;
-  width: 1146px;  position: relative;
-  min-height: 532px;
+.slider {
+  position: relative;
 
+  padding-top: 275px;
+
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
-.slider-title-btn {
-  position: absolute;
-  top: 313px;
-  left: 233px;
-}
 
-.header-slider h1 {
-  width: 680px;  padding: 0px;
+
+.slide-title {
+  width: 700px;
+  padding: 0px;
   margin: 0 auto;
   margin-bottom: 30px;
   text-align: center;
-
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
 }
 
-.header-slider a {
+.slide .slide-btn {
   display: block;
 
   width: 205px;
@@ -514,9 +538,68 @@ text-align: left;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 
 
-  background-color: rgba(91, 246, 142, 0.35);
+  background-color: rgb(231, 74, 53);
   border-radius: 64px;
 }
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 22px;
+  left: 0px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+body > input[type="radio"] {
+  display: none;
+}
+
+.slide {
+  display: none;
+}
+
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+#btn-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slider-icecream-01.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/slider-icecream-02.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/slider-icecream-03.png");
+}
+
 
 .btn {
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -554,6 +637,7 @@ text-align: left;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 23px;
+  font-family: "Roboto", "Arial", sans-serif;
 
 }
 
@@ -658,7 +742,8 @@ text-align: left;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
+  position: relative;
+  z-index: 800;
 }
 
 .icecream-item .icecream-item-title:hover,
