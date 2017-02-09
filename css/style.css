@@ -1,15 +1,15 @@
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
   color: #323232;
+  background-color: #849d8f;
 
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 16px;
-  min-width: 1200px;
-  background-color: #849d8f;
 }
 
 h1 {
@@ -44,17 +44,17 @@ img {
 .site-wrapper {
   min-width: 1200px;
 
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+
   background-repeat: no-repeat;
   background-position: top center;
-
-  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .site-wrapper::before,
 .site-wrapper::after {
-  content: "";
-
   visibility: hidden;
+
+  content: "";
 }
 
 .site-wrapper::before {
@@ -68,12 +68,14 @@ img {
 
 
 .main-header {
+  position: relative;
+
   width: 1200px;
   margin: 0 auto;
   margin-bottom: 37px;
   padding-top: 10px;
   padding-right: 0px;
-  position: relative;
+
   background-color: transparent;
 }
 
@@ -100,6 +102,7 @@ img {
   padding-right: 25px;
   padding-bottom: 23px;
   padding-left: 11px;
+
   color: #ffffff;
 
 }
@@ -107,24 +110,30 @@ img {
 .header-nav ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
+
   font-size: 0;
 }
 
 .header-nav > ul > li {
   display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 18px;
+
   padding: 7px 14px;
+
+  vertical-align: top;
+
   color: #ffffff;
   border-radius: 32px;
+
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .header-nav > ul > li.active-nav,
 .header-nav a.active-link {
+  color: #ffffff;
   background-color: #d07058;
-  color: #ffffff;
 }
 
 .header-nav > ul > li.active-nav > a {
@@ -133,12 +142,15 @@ img {
 
 .header-nav > ul > li > a {
   display: block;
+
   text-decoration: none;
+
   color: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-family: "Roboto", "Arial", sans-serif;
   /*padding: 7px 5px; */
   font-weight: bold;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-family: "Roboto", "Arial", sans-serif;
   /*border-radius: 32px; */
 }
 
@@ -146,13 +158,11 @@ img {
 /* беда что li:active а не a:active */
 .header-nav > ul > li:hover:not(.active-nav) {
   color: #333333;
-
   background-color: #f7f6f3;
 }
 
 .header-nav > ul > li:active:not(.active-nav) {
   color: #333333;
-
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);
 }
 
@@ -165,24 +175,30 @@ img {
 /* не всегда успеваю передвинуть мышку на всплывающее меню*/
 .header-nav .sub-menu {
   position: absolute;
-  font-size: 14px;
-  line-height: 16px;
-
-  background-color: #f8f7f4;
-  width: 143px;
-  border-radius: 5px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 100;
   top: 37px;
   left: -6px;
+
   display: none;
+
+  width: 143px;
+
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .sub-menu a {
-  color: #323232;
-  text-decoration: none;
   display: block;
+
   padding: 8px 20px;
+
+  text-decoration: none;
+
+  color: #323232;
 
 }
 
@@ -191,31 +207,36 @@ img {
 }
 
 .sub-menu a:hover:not(.active-link) {
+  border-radius: 5px;
   background-color: #fbded7;
-  border-radius: 5px;
 }
 
 .sub-menu a:active:not(.active-link) {
+  border-radius: 5px;
   background-color: #f6b5a5;
-  border-radius: 5px;
 }
 
 .sub-menu li:first-child a {
-  font-weight: bold;
+  position: relative;
+
   padding-top: 10px;
   padding-bottom: 12px;
-  position: relative;
+
+  font-weight: bold;
 }
 
 /* это вообще нормально так делать? */
 .sub-menu li:first-child a::after {
-  content: "";
-  width: 123px;
-  height: 1px;
-  background-color: #d1d0ce;
   position: absolute;
   top: 37px;
   left: 10px;
+
+  width: 123px;
+  height: 1px;
+
+  content: "";
+
+  background-color: #d1d0ce;
 }
 
 .sub-menu li:last-child a {
@@ -224,21 +245,23 @@ img {
 }
 
 .header-buying {
+  position: relative;
+
   float: right;
-  text-align: right;
+
   min-width: 267px;
-
-  font-size: 0px;
   padding-top: 13px;
-
   padding-bottom: 23px;
   padding-left: 20px;
 
-  position: relative;
+  text-align: right;
+
+  font-size: 0px;
 }
 
 .logo {
   float: left;
+
   width: 154px;
   height: 64px;
   margin-left: -1px;
@@ -246,15 +269,18 @@ img {
 
 .header-search {
   display: inline-block;
-  vertical-align: top;
+
   width: 32px;
   height: 32px;
+  margin-right: 10px;
+
+  vertical-align: top;
+
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -32px -193px;
-  margin-right: 10px;
 }
 
 .header-search:hover {
@@ -265,20 +291,24 @@ img {
 
 
 .search-form {
+  position: absolute;
+  z-index: 101;
+  top: 50px;
+  right: 228px;
+
   display: none;
 
-  vertical-align: top;
-text-align: left;
-  font-size: 14px;
-  position: absolute;
+  width: 310px;
   padding: 20px 15px;
+
+text-align: left;
+  vertical-align: top;
+
   border-radius: 5px;
   background-color: #f8f7f4;
-  z-index: 101;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  right: 228px;
-  top: 50px;
-  width: 310px;
+
+  font-size: 14px;
 }
 
 /* быстро пропадает */
@@ -289,37 +319,43 @@ text-align: left;
 .main-header input[type="text"],
 .main-header input[type="password"] {
   box-sizing: border-box;
-  padding: 9px 15px;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #323232;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-  margin: 0;
   width: 100%;
+  margin: 0;
+  padding: 9px 15px;
+
+  color: #323232;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
 }
 
 
 .main-header  input[type="text"]:hover,
 .main-header input[type="password"]:hover {
-  border: 2px solid #d3d3d2;
   padding: 8px 14px;
+
+  border: 2px solid #d3d3d2;
 }
 
 /* голубое свечеие в хроме */
 .main-header  input[type="text"]:focus,
 .main-header input[type="password"]:focus {
-  border: 2px solid #8fbdec;
   padding: 8px 14px;
+
+  border: 2px solid #8fbdec;
 }
 
 .main-header label {
-  color: #5b9ddf;
+  display: none;
+
   margin: 0px;
   padding: 0px;
-  display: none;
+
+  color: #5b9ddf;
 }
 
 .main-header input::-webkit-input-placeholder {
@@ -327,7 +363,6 @@ text-align: left;
 }
 
 .main-header input:-moz-placeholder {
-
   font-weight: normal;
 }
 
@@ -335,36 +370,43 @@ text-align: left;
 
 .header-login {
   position: relative;
+
   display: inline-block;
+
+  margin-right: 10px;
   padding: 8px 16px;
   padding-left: 43px;
+
   vertical-align: top;
-  color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 16px;
-  background-color: rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
   border-radius: 16px;
-  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  font-size: 14px;
   font-weight: 500;
+  line-height: 16px;
 }
 
 .header-login::before {
-  content: "";
   position: absolute;
+  top: 6px;
+  left: 16px;
+
   width: 21px;
   height: 19px;
 
+  content: "";
   /* можно ли указывать для иконки прозрачный фон? */
+
   background: transparent url("../img/sprite.png");
   background-position: -172px -10px;
-  left: 16px;
-  top: 6px;
 }
 
 .header-login:hover {
+  color: #323232;
   background-color: rgba(255, 255, 255, 1);
-  color: #323232;
 }
 
 .header-login:hover::before {
@@ -372,38 +414,46 @@ text-align: left;
 }
 
 .login-form {
+  position: absolute;
+  z-index: 102;
+  top: 50px;
+  right: 123px;
+
   display: none;
 
-  vertical-align: top;
-  text-align: left;
-  font-size: 14px;
-  position: absolute;
+  width: 240px;
   padding: 20px 19px;
+
+  text-align: left;
+  vertical-align: top;
+
   border-radius: 5px;
   background-color: #f8f7f4;
-  z-index: 102;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  right: 123px;
-  top: 50px;
-  width: 240px;
+
+  font-size: 14px;
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
   display: block;
+
   margin-bottom: 20px;
 }
 
 .login-form button {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 24px;
-  padding: 10px 25px;
-  border-radius: 44px;
-  border: 0;
-  font-weight: bold;
-  font-family: "Roboto", "Arial", sans-serif;
   float: left;
+
+  padding: 10px 25px;
+
+  color: #ffffff;
+  border: 0;
+  border-radius: 44px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
 
 }
 
@@ -413,11 +463,14 @@ text-align: left;
 
 .login-form a {
   display: block;
+
+  margin: 0px;
+  padding: 0px;
+
   color: #323232;
+
   font-size: 13px;
   line-height: 24px;
-  padding: 0px;
-  margin: 0px;
 }
 
 .header-login:hover + .login-form {
@@ -428,37 +481,44 @@ text-align: left;
 
 .header-basket {
   position: relative;
+
   display: inline-block;
+
   padding-top: 8px;
+  padding-right: 34px;
   padding-bottom: 8px;
   padding-left: 44px;
-  padding-right: 34px;
+
   vertical-align: top;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 16px;
+
+  color: #ffffff;
   border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  font-size: 14px;
   font-weight: 500;
+  line-height: 16px;
 }
 
 .header-basket::before {
-  content: "";
   position: absolute;
+  top: 6px;
+  left: 17px;
+
   width: 21px;
   height: 20px;
 
+  content: "";
   /* можно ли указывать для иконки прозрачный фон? */
+
   background: transparent url("../img/sprite.png");
   background-position: -90px -10px;
-  left: 17px;
-  top: 6px;
 }
 
 .header-basket:hover {
+  color: #323232;
   background-color: rgba(255, 255, 255, 1);
-  color: #323232;
 }
 
 
@@ -469,57 +529,67 @@ text-align: left;
 
 /* через position так как вылезает на слайдер*/
 .header-info {
+  position: absolute;
+  top: 73px;
+  right: 25px;
 
   width: 175px;
-  position: absolute;
-  right: 25px;
-  top: 73px;
+
   color: #ffffff;
+
   font-size: 0px;
 }
 
 .worktime {
   display: inline-block;
-  vertical-align: top;
-  width: 175px;
-  text-align: right;
-  font-size: 14px;
-  line-height: 16px;
 
+  width: 175px;
   margin-bottom: 4px;
+
+  text-align: right;
+  vertical-align: top;
+
+  font-size: 14px;
   font-weight: bold;
+  line-height: 16px;
 }
 
 .phone {
   display: inline-block;
-  text-align: right;
+
   width: 175px;
+
+  text-align: right;
   vertical-align: top;
+
   font-size: 22px;
-  line-height: 24px;
   font-weight: bold;
+  line-height: 24px;
 }
 
 .slider {
   position: relative;
 
+  margin-bottom: 40px;
   padding-top: 275px;
 
   text-align: center;
+
   color: #ffffff;
-  margin-bottom: 40px;
 }
 
 
 
 .slide-title {
   width: 700px;
-  padding: 0px;
   margin: 0 auto;
   margin-bottom: 30px;
+  padding: 0px;
+
   text-align: center;
-  font-weight: bold;
+
   font-size: 60px;
+  font-weight: bold;
   line-height: 60px;
 }
 
@@ -529,38 +599,40 @@ text-align: left;
   width: 205px;
   margin: 0 auto;
   padding: 10px 36px;
+
   text-align: center;
-  font-size: 32px;
-  line-height: 44px;
-  color: #ffffff;
-  font-weight: bold;
   text-decoration: none;
+
+  color: #ffffff;
+  border-radius: 64px;
+  background-color: rgb(231, 74, 53);
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 
-
-  background-color: rgb(231, 74, 53);
-  border-radius: 64px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 44px;
 }
 
 .slider-controls label {
   display: inline-block;
+
   width: 17px;
   height: 17px;
   margin-right: 8px;
 
+  cursor: pointer;
   vertical-align: top;
 
-  background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  cursor: pointer;
+  background-color: transparent;
 }
 
 .slider-controls {
   position: absolute;
+  z-index: 20;
   bottom: 22px;
   left: 0px;
-  z-index: 20;
 
   font-size: 0;
 }
@@ -602,13 +674,14 @@ body > input[type="radio"] {
 
 
 .btn {
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  color: #ffffff;
   text-decoration: none;
+
+  color: #ffffff;
   /* приставки */
   background-image: -moz-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
-  background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 
@@ -630,37 +703,43 @@ body > input[type="radio"] {
 
 .info-block {
   width: 520px;
-  border-radius: 15px;
   /* почему при измерении в фотошопе padding'и в фш сверху и снизу 23,
   но при этом при верстке пришлось делать разные, так как плывет иначе   */
   padding-top: 15px;
-  padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 23px;
+  padding-left: 20px;
+
+  border-radius: 15px;
+
   font-family: "Roboto", "Arial", sans-serif;
 
 }
 
 .info-block h3 {
-  padding: 0px;
   margin: 0px;
+  margin-bottom: 15px;
+  padding: 0px;
+
   color: #ffffff;
+
   font-size: 35px;
-  line-height: 41px;
   font-weight: bold;
-  margin-bottom: 15px;
+  line-height: 41px;
 }
 
 
 /* дублировать ли font-family? */
 .discounts p {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  padding: 0px;
   margin: 0px;
   margin-bottom: 45px;
+  padding: 0px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
 }
 
 .discounts a {
@@ -670,23 +749,29 @@ body > input[type="radio"] {
 
 .info-block a {
   display: inline-block;
-  vertical-align: top;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
+
   padding: 11px 23px;
+
+  vertical-align: top;
+
+  color: #ffffff;
   border-radius: 46px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
 }
 
 .discounts-rasberry {
   float: left;
+
   background: #3e0001 url("../img/background-rasberry.jpg") no-repeat;
 }
 
 
 .discount-chocolate {
   float: right;
+
   background: #542e18 url("../img/background-choco.jpg") no-repeat;
 }
 
@@ -702,29 +787,35 @@ body > input[type="radio"] {
 }
 
 .icecream-item {
-  display: inline-block;
   position: relative;
+
+  display: inline-block;
+
   width: 267px;
   margin-right: 26px;
 
-  vertical-align: top;
   text-align: center;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
+  vertical-align: top;
+
   color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 /* принципиально ли, что рубль другой? */
 .icecream-item .price {
   position: absolute;
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: bold;
-  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  z-index: 560;
   top: 210px;
   left: 0;
-  z-index: 560;
+
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
 }
 
 .icecream-item .kilogram {
@@ -732,18 +823,23 @@ body > input[type="radio"] {
 }
 
 .icecream-item img {
-  margin-bottom: 5px;
   position: relative;
+
+  margin-bottom: 5px;
+}
+
+.icecream-item:hover img {
   z-index: 500;
 }
 
 .icecream-item .icecream-item-title {
-
-  text-decoration: none;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   z-index: 800;
+
+  text-decoration: none;
+
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .icecream-item .icecream-item-title:hover,
@@ -754,18 +850,21 @@ body > input[type="radio"] {
 
 
 .icecream-item .btn {
+  position: absolute;
+  z-index: 550;
+  top: 333px;
+  left: 33px;
+
+  display: none;
 
   width: 170px;
   padding: 11px 15px;
-  font-size: 18px;
-  line-height: 24px;
+
   color: #ffffff;
   border-radius: 46px;
-  position: absolute;
-  top: 333px;
-  left: 33px;
-  display: none;
-  z-index: 550;
+
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .icecream-item:hover .btn {
@@ -774,28 +873,36 @@ body > input[type="radio"] {
 
 /* можно ли так */
 .icecream-item:hover::before {
-  content: "";
   position: absolute;
-  width: 293px;
-  height: 404px;
-  background-color: rgba(248, 247, 244, 0.3);
-
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 50;
   top: -6px;
   left: -13px;
-  z-index: 50;
+
+  width: 293px;
+  height: 404px;
+
+  content: "";
+
+  background-color: rgba(248, 247, 244, 0.3);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 
 }
 
 .icecream-item::after {
-  content: "";
-  width: 61px;
-  height: 61px;
-  background: transparent url("../img/sprite.png");
-  background-position: -130px -121px;
   position: absolute;
   top: 0px;
   left: 0px;
+
+  width: 61px;
+  height: 61px;
+
+  content: "";
+
+  background: transparent url("../img/sprite.png");
+  background-position: -130px -121px;
+}
+
+.icecream-item:hover::after {
   z-index: 600;
 }
 
@@ -804,13 +911,14 @@ body > input[type="radio"] {
 }
 
 .shop-description {
-  margin-bottom: 40px;  padding-left: 20px;
+  margin-bottom: 40px;
   padding-top: 27px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 25px;padding-left: 20px;
 
-  background: #ecdcbd url("../img/pattern-wafer.png") repeat;
   border-radius: 15px;
+  background: #ecdcbd url("../img/pattern-wafer.png") repeat;
+
   font-size: 0px;
 
 
@@ -819,10 +927,12 @@ body > input[type="radio"] {
 .shop-description h2 {
   margin: 0;
   padding: 0;
+
+  color: #323232;
+
+  font-size: 24px;
   font-weight: 500;
   line-height: 30px;
-  font-size: 24px;
-  color: #323232;
 
 }
 
@@ -834,18 +944,21 @@ body > input[type="radio"] {
 
 
 .description-item {
+  position: relative;
+
   display: inline-block;
 
   width: 480px;
+  margin-right: 29px;
   padding-top: 21px;
   padding-left: 57px;
-  margin-right: 29px;
+
   vertical-align: top;
+
+  color: #323232;
 
   font-size: 16px;
   line-height: 22px;
-  color: #323232;
-  position: relative;
 
 }
 
@@ -854,51 +967,63 @@ body > input[type="radio"] {
 }
 
 .shop-description-technology::before {
-  content: "";
-  width: 49px;
-  height: 49px;
-  /* фон */
-  background: url("../img/sprite.png");
-  background-position: -213px -10px;
+  position: absolute;
   top: 10px;
   left: 0px;
-  position: absolute;
+
+  width: 49px;
+  height: 49px;
+
+  content: "";
+  /* фон */
+
+  background: url("../img/sprite.png");
+  background-position: -213px -10px;
 }
 
 .shop-description-farm::before {
-  content: "";
-  width: 49px;
-  height: 49px;
-  /* фон */
-  background: url("../img/sprite.png");
-  background-position: -10px -50px;
+  position: absolute;
   top: 10px;
   left: 0px;
-  position: absolute;
+
+  width: 49px;
+  height: 49px;
+
+  content: "";
+  /* фон */
+
+  background: url("../img/sprite.png");
+  background-position: -10px -50px;
 }
 
 .shop-description-materials::before {
-  content: "";
-  width: 49px;
-  height: 49px;
-  /* фон */
-  background: url("../img/sprite.png");
-  background-position: -211px -131px;
+  position: absolute;
   top: 10px;
   left: 0px;
-  position: absolute;
+
+  width: 49px;
+  height: 49px;
+
+  content: "";
+  /* фон */
+
+  background: url("../img/sprite.png");
+  background-position: -211px -131px;
 }
 
 .shop-description-temperature::before {
-  content: "";
-  width: 49px;
-  height: 49px;
-  /* фон */
-  background: url("../img/sprite.png");
-  background-position: -211px -200px;
+  position: absolute;
   top: 10px;
   left: 0px;
-  position: absolute;
+
+  width: 49px;
+  height: 49px;
+
+  content: "";
+  /* фон */
+
+  background: url("../img/sprite.png");
+  background-position: -211px -200px;
 }
 
 .news-subscribe {
@@ -907,8 +1032,10 @@ body > input[type="radio"] {
 
 .news {
   float: left;
-  background: #ffffff url("../img/background-strawberry.jpg") no-repeat;
+
   min-height: 182px;
+
+  background: #ffffff url("../img/background-strawberry.jpg") no-repeat;
   /*
   padding-top: 15px;
   padding-left: 20px;
@@ -917,27 +1044,34 @@ body > input[type="radio"] {
 }
 
 .news span {
-  font-size: 16px;
-  line-height: 22px;
-  color: #323232;
-  font-weight: 500;
   display: block;
+
   margin-top: 7px;
   margin-bottom: 5px;
+
+  color: #323232;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 /* в макете после 10 два пробела, это опечатка?
 делать высоту блока с помощью margin? */
 .news a {
-  font-size: 24px;
-  line-height: 30px;
-  color: #323232;
-  font-weight: bold;
-  text-decoration: underline;
-  border-radius: 0;
-  padding: 0px;
-  width: 290px;
   display: block;
+
+  width: 290px;
+  padding: 0px;
+
+  text-decoration: underline;
+
+  color: #323232;
+  border-radius: 0;
+
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
   /*margin-bottom: 58px; */
 
 }
@@ -952,17 +1086,19 @@ body > input[type="radio"] {
 /* не разобралась с рамкой */
 .news-subscribe .subscribe {
   float: right;
+
   box-sizing: border-box;
   width: 560px;
-  background-color: #f8f7f4;
-  color: #5a5a5a;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: normal;
-  border: 6px solid white;
   padding-top: 12px;
-
   padding-bottom: 35px;
+
+  color: #5a5a5a;
+  border: 6px solid white;
+  background-color: #f8f7f4;
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
 }
 
 .subscribe p {
@@ -971,34 +1107,38 @@ body > input[type="radio"] {
 
 .subscribe-form input {
   width: 335px;
-  padding: 9px 15px;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
   margin-right: 9px;
-  line-height: 24px;
-  font-size: 16px;
+  padding: 9px 15px;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+
   font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .subscribe-form button {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 24px;
   padding: 10px 18px;
-  border-radius: 44px;
+
+  color: #ffffff;
   border: 0;
-  font-weight: bold;
+  border-radius: 44px;
+
   font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
 }
 
 .container .map-contacts {
+  position: relative;
+  left: -27px;
+
   width: 1146px;
   padding: 62px 27px;
 
-
   background-image: url("../img/map.png");
-  position: relative;
-  left: -27px;
 }
 
 .contacts-feedback {
@@ -1006,25 +1146,27 @@ body > input[type="radio"] {
 
   width: 252px;
   padding: 30px 25px;
-  background-color: #ffffff;
-  border-radius: 15px;
+
   color: #323232;
+  border-radius: 15px;
+  background-color: #ffffff;
 }
 
 .contacts-title {
   margin: 0px;
 
   font-size: 14px;
-  line-height: 20px;
   font-weight: normal;
+  line-height: 20px;
 }
 
 .contacts-info {
   margin: 0px;
   margin-bottom: 2px;
+
   font-size: 18px;
-  line-height: 24px;
   font-weight: bold;
+  line-height: 24px;
 }
 
 .contacts-item {
@@ -1034,18 +1176,22 @@ body > input[type="radio"] {
 
 .contacts-feedback a {
   display: block;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 24px;
-  padding: 10px 27px;
-  border-radius: 44px;
+
   margin-top: 30px;
+  padding: 10px 27px;
+
+  color: #ffffff;
+  border-radius: 44px;
+
+  font-size: 18px;
   font-weight: bold;
+  line-height: 24px;
 }
 
 .main-footer {
   margin-top: 15px;
   padding-bottom: 25px;
+
   color: #ffffff;
 }
 
@@ -1059,18 +1205,22 @@ body > input[type="radio"] {
 }
 
 .social-btn {
-  font-size: 0px;
+  display: inline-block;
+
   width: 32px;
   height: 32px;
-  display: inline-block;
+  margin-top: 20px;
+  margin-right: 8px;
+
   vertical-align: top;
   text-decoration: none;
-  background: transparent url("../img/sprite.png") no-repeat center;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.7);
-  margin-right: 8px;
-  margin-top: 20px;
+
   opacity: 0.8;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: transparent url("../img/sprite.png") no-repeat center;
+
+  font-size: 0px;
 }
 
 /* правильно ли вырезала кнопки */
@@ -1105,21 +1255,24 @@ body > input[type="radio"] {
 
 .footer-links {
   float: left;
-  font-size: 0px;
-  width: 339px;
 
+  width: 339px;
   margin-top: 18px;
+
+  font-size: 0px;
 }
 
 .footer-links-item {
-  width: 175px;
   display: inline-block;
+
+  width: 175px;
+  padding-left: 22px;
+
+  text-align: left;
   vertical-align: top;
+
   font-size: 13px;
   line-height: 18px;
-
-  padding-left: 22px;
-  text-align: left;
 }
 
 .footer-links-item:first-child {
@@ -1127,10 +1280,13 @@ body > input[type="radio"] {
 }
 
 .footer-links-item a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 5px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
   font-size: 13px;
   line-height: 18px;
 }
@@ -1143,37 +1299,46 @@ body > input[type="radio"] {
 
 
 .footer-link-suppliers {
-  font-weight: bold;
   position: relative;
+
+  font-weight: bold;
 }
 
 .footer-link-suppliers::before {
-  content: "";
   position: absolute;
+  top: 2px;
+  left: -22px;
+
   width: 15px;
   height: 13px;
+
+  content: "";
+
   background: transparent url("../img/sprite.png") no-repeat center;
   background-position: -130px -88px;
-  left: -22px;
-  top: 2px;
 }
 
 .footer-copyright {
   float: right;
-  padding-top: 2px;
+
   width: 190px;
+  padding-top: 2px;
+
   color: #ffffff;
+
   font-size: 12px;
   line-height: 18px;
 
 }
 
 .footer-copyright p a {
+  text-decoration: none;
+
   color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
   font-size: inherit;
   line-height: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-copyright p a:hover,
