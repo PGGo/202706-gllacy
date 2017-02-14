@@ -19,36 +19,40 @@
           <div class="logo">
             <img class="logo" src="img/logo-gllacy.png" alt="Gllacy Shop" width="154" height="64"/>
           </div>
+
           <nav class="header-nav">
             <ul>
               <li>
-                <a href="#">Каталог</a>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="#">Новинки</a>
-                  </li>
-                  <li>
-                    <a href="#">Сливочное</a>
-                  </li>
-                  <li>
-                    <a href="#">Щербеты</a>
-                  </li>
-                  <li>
-                    <a href="#">Фруктовый лед</a>
-                  </li>
-                  <li>
-                    <a href="#">Мелорин</a>
-                  </li>
-                </ul>
+                <a href="#"><span class="link-nav">Каталог</span></a>
+                <div class="sub-menu-container">
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">Новинки</a>
+                    </li>
+                    <li>
+                      <a href="#">Сливочное</a>
+                    </li>
+                    <li>
+                      <a href="#">Щербеты</a>
+                    </li>
+                    <li>
+                      <a href="#">Фруктовый лед</a>
+                    </li>
+                    <li>
+                      <a href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
-                <a href="#">Доставка и оплата</a>
+                <a href="#"><span class="link-nav">Доставка и оплата</span></a>
               </li>
               <li>
-                <a href="#">О Компании</a>
+                <a href="#"><span class="link-nav">О Компании</span></a>
               </li>
             </ul>
           </nav>
+
           <div class="header-buying">
             <a class="header-search" href="#">Поиск</a>
             <form class="search-form" action="index.html" method="post">
@@ -171,15 +175,17 @@
               10 способов сервировки фруктовых щербетов к столу
             </a>
           </article>
-          <article class="subscribe info-block">
-            <p>
-              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что
-              у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-            </p>
-            <form class="subscribe-form" action="index.html" method="post">
-              <input type="text" name="email" placeholder="Электронная почта">
-              <button class="btn" type="submit" name="button">Отправить</button>
-            </form>
+          <article class="subscribe">
+            <div class="subscribe-container info-block">
+              <p>
+                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что
+                у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+              </p>
+              <form class="subscribe-form" action="index.html" method="post">
+                <input type="text" name="email" placeholder="Электронная почта">
+                <button class="btn" type="submit" name="button">Отправить</button>
+              </form>
+            </div>
           </article>
         </div>
         <div class="map-contacts clearfix">
@@ -237,6 +243,23 @@
           </section>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div class="feedback-form-title">Мы обязательно вам ответим!</div>
+      <form class="feedback-form clearfix" action="index.html" method="post">
+        <label for="feedback-name">Как вас зовут?</label>
+        <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
+        <label for="feedback-email">Ваша почта для ответа?</label>
+        <input type="text" name="feedback-email" placeholder="Ваша почта для ответа?" id="" placeholder="Ваша почта для ответа?" id="feedback-email">
+        <label for="feedback-content">Напишите что-нибудь...</label>
+        <textarea rows="6" name="feedback-content" placeholder="Напишите что-нибудь..." id="feedback-content"></textarea>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <div class="modal-overlay">
     </div>
   </body>
 </html>
