@@ -51,7 +51,6 @@ img {
 
   width: 430px;
   margin-left: -238px;
-
   padding: 18px 25px 25px;
   padding-top: 17px;
   padding-right: 25px;
@@ -121,9 +120,9 @@ img {
 
 .modal-content textarea {
   width: 100%;
+  min-height: 155px;
 
   resize: none;
-  min-height: 155px;
 }
 
 .modal-content input[type="text"],
@@ -142,7 +141,6 @@ img {
   line-height: 24px;
 }
 
-
 .modal-content input[type="text"]:hover,
 .modal-content textarea:hover {
   padding: 7px 14px;
@@ -150,7 +148,6 @@ img {
   border: 2px solid #d3d3d2;
 }
 
-/* голубое свечеие в хроме */
 .modal-content input[type="text"]:focus,
 .modal-content textarea:focus {
   padding: 7px 14px;
@@ -189,7 +186,6 @@ img {
   padding: 10px 25px;
 
   color: #ffffff;
-
   border: 0px;
   border-radius: 44px;
 
@@ -197,7 +193,6 @@ img {
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
-;
 }
 
 .modal-overlay {
@@ -240,6 +235,7 @@ img {
 }
 
 .catalog-wrapper {
+  background: -oz-linear-gradient(top, #9db1a5 0%, #849d8f 100%);
   background: -webkit-linear-gradient(top, #9db1a5 0%, #849d8f 100%);
   background: linear-gradient(to bottom, #9db1a5 0%, #849d8f 100%);
 }
@@ -250,7 +246,6 @@ img {
 
   width: 1200px;
   margin: 0 auto;
-  /*margin-bottom: 37px;*/
   padding-top: 10px;
   padding-right: 0px;
 
@@ -261,7 +256,6 @@ img {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
-  /*background-color: rgba(137, 221, 54, 0.2);*/
 }
 
 .clearfix::after {
@@ -270,7 +264,6 @@ img {
 
   content: "";
 }
-
 
 .header-nav {
   float: left;
@@ -282,7 +275,6 @@ img {
   padding-left: 11px;
 
   color: #ffffff;
-
 }
 
 .header-nav ul {
@@ -305,8 +297,6 @@ img {
   background-color: #d07058;
 }
 
-
-
 .header-nav > ul > li > a {
   display: inline-block;
 
@@ -320,15 +310,12 @@ img {
 
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
-  /*padding: 7px 5px; */
   font-weight: bold;
   line-height: 18px;
-  /*border-radius: 32px; */
 }
 
 .header-nav .link-nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
 }
 
 .active-nav span.link-nav {
@@ -362,15 +349,13 @@ img {
   top: 30px;
   left: -10px;
 
-display: none;
+  display: none;
 
-padding-top: 5px;
+  padding-top: 5px;
 }
 
 .header-nav .sub-menu-container:hover {
   display: block;
-
-
 }
 
 .header-nav .sub-menu {
@@ -382,8 +367,6 @@ padding-top: 5px;
 
   font-size: 14px;
   line-height: 16px;
-
-
 }
 
 .sub-menu a {
@@ -394,7 +377,6 @@ padding-top: 5px;
   text-decoration: none;
 
   color: #323232;
-
 }
 
 .header-nav > ul > li > a:hover + .sub-menu-container {
@@ -420,7 +402,6 @@ padding-top: 5px;
   font-weight: bold;
 }
 
-/* это вообще нормально так делать? */
 .sub-menu li:first-child a::after {
   position: absolute;
   top: 37px;
@@ -464,8 +445,8 @@ padding-top: 5px;
 
 .header-search-container {
   display: inline-block;
-  vertical-align: top;
 
+  vertical-align: top;
 }
 
 .header-search {
@@ -496,11 +477,11 @@ padding-top: 5px;
   right: 228px;
 
   display: none;
+
   padding-top: 20px;
 }
 
 .search-form {
-
   width: 310px;
   padding: 20px 15px;
 
@@ -540,7 +521,6 @@ padding-top: 5px;
   line-height: 24px;
 }
 
-
 .main-header input[type="text"]:hover,
 .main-header input[type="password"]:hover {
   padding: 8px 14px;
@@ -548,7 +528,6 @@ padding-top: 5px;
   border: 2px solid #d3d3d2;
 }
 
-/* голубое свечеие в хроме */
 .main-header input[type="text"]:focus,
 .main-header input[type="password"]:focus {
   padding: 8px 14px;
@@ -577,17 +556,19 @@ padding-top: 5px;
   position: relative;
 
   display: inline-block;
-  vertical-align: top;
 
+  vertical-align: top;
 }
 
 .login-form-container {
-  padding-top: 20px;
-  display: none;
   position: absolute;
   z-index: 102;
   top: 15px;
   right: 8px;
+
+  display: none;
+
+  padding-top: 20px;
 }
 
 .header-login {
@@ -635,12 +616,8 @@ padding-top: 5px;
 }
 
 .login-form {
-
-
-
   width: 240px;
   padding: 20px 19px;
-
 
   text-align: left;
   vertical-align: top;
@@ -672,7 +649,6 @@ padding-top: 5px;
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
-
 }
 
 .login-form-links {
@@ -704,24 +680,26 @@ padding-top: 5px;
   background-position: -94px -35px;
 }
 
-
 .header-basket-container {
   position: relative;
-  text-align: left;
+
   display: inline-block;
+
+  text-align: left;
   vertical-align: top;
 }
 
 .header-basket {
   position: relative;
-  width: 73px;
+
   display: inline-block;
-  text-align: left;
+
+  width: 73px;
   padding-top: 8px;
-/*  padding-right: 34px;*/
   padding-bottom: 8px;
   padding-left: 44px;
 
+  text-align: left;
   vertical-align: top;
   text-decoration: none;
 
@@ -758,12 +736,14 @@ padding-top: 5px;
 }
 
 .basket-modal-container {
-  display: none;
-  padding-top: 10px;
   position: absolute;
+  z-index: 505;
   top: 27px;
   right: 0px;
-  z-index: 505;
+
+  display: none;
+
+  padding-top: 10px;
 }
 
 .header-basket-container:hover .basket-active + .basket-modal-container {
@@ -771,92 +751,106 @@ padding-top: 5px;
 }
 
 .basket-modal {
-
   width: 510px;
   padding: 20px 15px;
-  background-color: #f8f7f4;
+
+  color: #323232;
   border-radius: 5px;
+  background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 13px;
   line-height: 16px;
-  color: #323232;
-
 }
 
-
-
 .basket-item {
-  padding-left: 6px;
   padding-bottom: 20px;
-  font-size: 0px;
+
+  padding-left: 6px;
+
   vertical-align: middle;
+
+  font-size: 0px;
 }
 
 .basket-item:last-child {
-  border-bottom: 1px solid #cacac7;
   padding-bottom: 16px;
+
+  border-bottom: 1px solid #cacac7;
 }
 
 .basket-item-delete {
+  position: relative;
+
   width: 14px;
   height: 14px;
+  margin-right: 7px;
+
+  cursor: pointer;
+
+  border: 0;
+  outline: none;
+  background-color: #f8f7f4;
 
   font-size: 0;
-
-  background-color: #f8f7f4;
-  border: 0;
-  cursor: pointer;
-  position: relative;
-  margin-right: 7px;
 }
 
 .basket-item img {
+  display: inline-block;
+
   width: 33px;
   height: 33px;
-  display: inline-block;
+
   vertical-align: top;
 }
 
-
 .basket-item-delete::before,
 .basket-item-delete::after {
-  content: "";
-  width: 14px;
-  height: 2px;
-  background-color: #323232;
   position: absolute;
   top: 15px;
   left: -2px;
+
+  width: 14px;
+  height: 2px;
+
+  content: "";
+
+  background-color: #323232;
 }
 
 .basket-item-delete::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .basket-item-delete::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .basket-item .item-name,
 .basket-item .item-kg,
 .basket-item .item-price {
   display: inline-block;
-  font-size: 13px;
-  vertical-align: top;
+
   margin: 0px;
   padding: 0px;
+  padding-top: 10px;
+
+  vertical-align: top;
+
+  color: #323232;
+
+  font-size: 13px;
   font-size: 13px;
   line-height: 16px;
-  color: #323232;
-  padding-top: 10px;
 }
 
 .basket-item .item-name {
   width: 217px;
-  padding-left: 14px;
   margin-right: 29px;
+  padding-left: 14px;
 }
 
 .basket-item .item-kg {
@@ -869,30 +863,32 @@ padding-top: 5px;
 
 .basket-modal .total-price {
   float: right;
-  font-size: 15px;
-  line-height: 18px;
-  color: #323232;
-  font-weight: bold;
+
   margin-top: 13px;
   margin-bottom: 15px;
+
+  color: #323232;
+
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 18px;
 }
 
 .basket-modal .btn {
   float: right;
   clear: both;
-  border: 0;
+
   padding: 10px 15px;
-  border-radius: 44px;
+
   color: #fefefe;
-  font-size: 18px;
-  line-height: 24px;
+  border: 0;
+  border-radius: 44px;
+
   font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
   font-weight: bold;
+  line-height: 24px;
 }
-
-
-
-
 
 .header-info {
   position: absolute;
@@ -943,8 +939,6 @@ padding-top: 5px;
 
   color: #ffffff;
 }
-
-
 
 .slide-title {
   width: 700px;
@@ -1038,18 +1032,14 @@ body > input[type="radio"] {
   background-image: url("../img/slider-icecream-03.png");
 }
 
-
 .btn {
   text-decoration: none;
 
   color: #ffffff;
-  /* приставки */
   background-image: -webkit-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   background-image: -ms-linear-gradient(90deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
-
-
 
 .btn:hover {
   background-image: -webkit-linear-gradient(90deg, rgb(236, 111, 94) 0%, rgb(246, 134, 105) 100%);
@@ -1063,12 +1053,8 @@ body > input[type="radio"] {
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.4);
 }
 
-
-
 .info-block {
   width: 520px;
-  /* почему при измерении в фотошопе padding'и в фш сверху и снизу 23,
-  но при этом при верстке пришлось делать разные, так как плывет иначе   */
   padding-top: 15px;
   padding-right: 20px;
   padding-bottom: 23px;
@@ -1077,7 +1063,6 @@ body > input[type="radio"] {
   border-radius: 15px;
 
   font-family: "Roboto", "Arial", sans-serif;
-
 }
 
 .info-block h3 {
@@ -1093,7 +1078,6 @@ body > input[type="radio"] {
 }
 
 
-/* дублировать ли font-family? */
 .discounts p {
   margin: 0px;
   margin-bottom: 45px;
@@ -1108,7 +1092,6 @@ body > input[type="radio"] {
 
 .discounts a {
   float: right;
-
 }
 
 .info-block a {
@@ -1132,7 +1115,6 @@ body > input[type="radio"] {
   background: #3e0001 url("../img/background-rasberry.jpg") no-repeat;
 }
 
-
 .discount-chocolate {
   float: right;
 
@@ -1143,10 +1125,7 @@ body > input[type="radio"] {
   margin-bottom: 40px;
 }
 
-
 .icecream {
-
-
   font-size: 0px;
 }
 
@@ -1169,7 +1148,6 @@ body > input[type="radio"] {
   line-height: 22px;
 }
 
-/* рубль другой */
 .icecream-item .price {
   position: absolute;
   z-index: 560;
@@ -1192,9 +1170,9 @@ body > input[type="radio"] {
 .icecream-item > img {
   position: relative;
 
-  margin-bottom: 7px;
   width: 267px;
   height: 267px;
+  margin-bottom: 7px;
 }
 
 .icecream-item:hover > img {
@@ -1202,12 +1180,14 @@ body > input[type="radio"] {
 }
 
 .icecream-item .img-price {
+  display: inline-block;
+
   width: auto;
   height: 37px;
-  display: inline-block;
-  vertical-align: middle;
   margin-top: -2px;
   margin-left: 2px;
+
+  vertical-align: middle;
 }
 
 .icecream-item .icecream-item-title {
@@ -1225,7 +1205,6 @@ body > input[type="radio"] {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
-
 
 .icecream-item .btn {
   position: absolute;
@@ -1298,8 +1277,6 @@ body > input[type="radio"] {
   background: #ecdcbd url("../img/pattern-wafer.png") repeat;
 
   font-size: 0px;
-
-
 }
 
 .shop-description h2 {
@@ -1311,15 +1288,12 @@ body > input[type="radio"] {
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
-
 }
 
 .shop-description ul {
   margin: 0;
   padding: 0;
 }
-
-
 
 .description-item {
   position: relative;
@@ -1337,7 +1311,6 @@ body > input[type="radio"] {
 
   font-size: 16px;
   line-height: 22px;
-
 }
 
 .description-item:nth-child(2n) {
@@ -1410,11 +1383,6 @@ body > input[type="radio"] {
   min-height: 182px;
 
   background: #ffffff url("../img/background-strawberry.jpg") no-repeat;
-  /*
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 23px; */
 }
 
 .news span {
@@ -1430,8 +1398,6 @@ body > input[type="radio"] {
   line-height: 22px;
 }
 
-/* в макете после 10 два пробела, это опечатка?
-делать высоту блока с помощью margin? */
 .news a {
   display: block;
 
@@ -1446,8 +1412,6 @@ body > input[type="radio"] {
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
-  /*margin-bottom: 58px; */
-
 }
 
 .news a:hover,
@@ -1455,9 +1419,6 @@ body > input[type="radio"] {
   color: #e84d37;
 }
 
-
-
-/* не разобралась с рамкой */
 .news-subscribe .subscribe {
   float: right;
 
@@ -1475,7 +1436,6 @@ body > input[type="radio"] {
 .subscribe-container {
   box-sizing: border-box;
   width: 548px;
-
   padding-top: 12px;
   padding-bottom: 35px;
 
@@ -1535,7 +1495,7 @@ body > input[type="radio"] {
 
 .contacts-title {
   margin: 0px;
-
+  width: 190px;
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
@@ -1553,7 +1513,6 @@ body > input[type="radio"] {
 .contacts-item {
   margin-bottom: 19px;
 }
-
 
 .contacts-feedback a {
   display: block;
@@ -1637,7 +1596,6 @@ body > input[type="radio"] {
 
 .filters {
   width: 879px;
-
   margin-bottom: 40px;
 
   color: #ffffff;
@@ -1683,32 +1641,27 @@ body > input[type="radio"] {
   padding: 9px 10px;
 
   color: #ffffff;
-
+  border: none;
   border-radius: 38px;
+  outline: none;
   background-color: rgba(248, 247, 244, 0.2);
 
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  border: none;
-  outline: none;
 }
 
 .filters-sorting select:hover {
-
   color: #323232;
-
   background-color: #ffffff;
-
 }
-
 
 .filters-sorting option {
   color: #323232;
+  border: none; outline: none;
 
   font-size: 14px;
   line-height: 16px;
-  border: none; outline: none;
 }
 
 .filters-price {
@@ -1738,7 +1691,6 @@ body > input[type="radio"] {
 .range-controls .bar {
   width: 100px;
   height: 4px;
-
   margin-left: 30px;
 
   background-color: rgba(248, 247, 244, 1);
@@ -1771,7 +1723,6 @@ body > input[type="radio"] {
   font-size: 0;
 }
 
-
 .price-controls .min-price,
 .price-controls .max-price {
   display: inline-block;
@@ -1781,13 +1732,10 @@ body > input[type="radio"] {
   vertical-align: top;
 
   font-size: 14px;
-
-
 }
 
 .price-controls .min-price {
   width: 100px;
-
 }
 
 .price-controls .max-price {
@@ -1809,12 +1757,10 @@ body > input[type="radio"] {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 16px;
-
 }
 
 .filters-fat {
   font-size: 0px;
-
 }
 
 .filters-fat ul {
@@ -1867,9 +1813,6 @@ body > input[type="radio"] {
 .filters-fillers li {
   padding-right: 7px;
 }
-
-
-
 
 .filters-fat label,
 .filters-fillers label
@@ -1950,7 +1893,6 @@ body > input[type="radio"] {
   background-color: rgba(248, 247, 244, 0.2);
 
   font-family: 'Roboto', 'Arial', sans-serif;
-
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -1959,7 +1901,6 @@ body > input[type="radio"] {
 
 .btn-submit:hover {
   color: #323232;
-
   background-color: #fbfcfb;
 }
 
@@ -1968,7 +1909,6 @@ body > input[type="radio"] {
 
   color: #323232;
   border: none;
-
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);
 }
@@ -1983,14 +1923,11 @@ body > input[type="radio"] {
   position: relative;
 
   float: right;
-  /*width: 267px;*/
 
-  padding: 0;
   margin-bottom: 13px;
+  padding: 0;
 
 }
-
-
 
 .pages ul {
   margin: 0;
@@ -2002,12 +1939,12 @@ body > input[type="radio"] {
 }
 
 .pages li {
-
   display: inline-block;
 
   margin-right: 4px;
-  vertical-align: middle;
+
   text-align: right;
+  vertical-align: middle;
 }
 
 .pages li:last-child {
@@ -2030,20 +1967,18 @@ body > input[type="radio"] {
 }
 
 .pages .page-back {
-  opacity: 0.2;
   margin-right: 10px;
   padding-top: 2px;
+
+  opacity: 0.2;
 }
 
 .pages .page-noactive {
   opacity: 0.2;
 }
 
-
-
 .pages .page-foward {
   margin-left: 10px;
-
 }
 
 .pages .current-page {
@@ -2057,10 +1992,8 @@ body > input[type="radio"] {
 
 .pages a:active:not(.current-page):not(.page-back):not(.page-foward) {
   color: #323232;
-
   background-color: rgba(255, 255, 255, 1);
 }
-
 
 .main-footer {
   margin-top: 15px;
@@ -2070,8 +2003,9 @@ body > input[type="radio"] {
 }
 
 .main-footer .footer-catalog {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-social {
@@ -2080,7 +2014,6 @@ body > input[type="radio"] {
   width: 267px;
   margin-right: 133px;
   padding: 0px;
-
 }
 
 .social-btn {
@@ -2102,7 +2035,6 @@ body > input[type="radio"] {
   font-size: 0px;
 }
 
-/* правильно ли вырезала кнопки */
 .social-btn:hover {
   opacity: 1;
 }
@@ -2114,7 +2046,6 @@ body > input[type="radio"] {
 
 .social-btn-tw {
   background-position: -220px -64px;
-
 }
 
 .social-btn-inst {
@@ -2123,7 +2054,6 @@ body > input[type="radio"] {
 
 .social-btn-fb {
   background-position: -125px -35px;
-
 }
 
 .social-btn-vk {
@@ -2174,7 +2104,6 @@ body > input[type="radio"] {
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
-
 .footer-link-suppliers {
   position: relative;
 
@@ -2205,7 +2134,6 @@ body > input[type="radio"] {
 
   font-size: 12px;
   line-height: 18px;
-
 }
 
 .footer-copyright p a {
@@ -2224,11 +2152,6 @@ body > input[type="radio"] {
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
-
 .footer-copyright p {
   margin: 0px;
-}
-
-.footer-copyright a {
-
 }
