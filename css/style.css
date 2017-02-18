@@ -12,30 +12,6 @@ body {
   line-height: 16px;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-
-  color: #ffffff;
-
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 60px;
-}
-
-h2 {
-  margin: 0;
-  padding: 0;
-
-  color: #323232;
-
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 24px;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -57,11 +33,12 @@ img {
   padding-bottom: 25px;
   padding-left: 23px;
 
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+
   color: #323232;
   border-radius: 10px;
   background: #f8f7f4;
-  -webkit-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
 }
 
 .modal-content-close {
@@ -237,9 +214,7 @@ img {
 }
 
 .catalog-wrapper {
-  background: -oz-linear-gradient(top, #9db1a5 0%, #849d8f 100%);
-  background: -webkit-linear-gradient(top, #9db1a5 0%, #849d8f 100%);
-  background: linear-gradient(to bottom, #9db1a5 0%, #849d8f 100%);
+  background: #849d8f url("../img/light-background.png") top repeat-x;
 }
 
 .main-header {
@@ -767,7 +742,6 @@ img {
 
 .basket-item {
   padding-bottom: 20px;
-
   padding-left: 6px;
 
   vertical-align: middle;
@@ -1193,12 +1167,13 @@ body > input[type="radio"] {
   position: relative;
   z-index: 800;
 
+  display: inline-block;
+
+  width: 257px;
+
   text-decoration: none;
 
   color: #ffffff;
-
-  display: inline-block;
-  width: 257px;
 }
 
 .icecream-item .icecream-item-title span {
@@ -1273,9 +1248,9 @@ body > input[type="radio"] {
 
 .shop-description {
   margin-bottom: 40px;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
   padding-left: 20px;
 
   border-radius: 15px;
@@ -1307,9 +1282,9 @@ body > input[type="radio"] {
 
   width: 480px;
   margin-right: 29px;
+  margin-bottom: 2px;
   padding-top: 21px;
   padding-left: 57px;
-  margin-bottom: 2px;
 
   vertical-align: top;
 
@@ -1325,7 +1300,7 @@ body > input[type="radio"] {
 
 .shop-description-technology::before {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 0px;
 
   width: 49px;
@@ -1339,7 +1314,7 @@ body > input[type="radio"] {
 
 .shop-description-farm::before {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 0px;
 
   width: 49px;
@@ -1353,7 +1328,7 @@ body > input[type="radio"] {
 
 .shop-description-materials::before {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 0px;
 
   width: 49px;
@@ -1367,7 +1342,7 @@ body > input[type="radio"] {
 
 .shop-description-temperature::before {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 0px;
 
   width: 49px;
@@ -1417,7 +1392,7 @@ body > input[type="radio"] {
 
   font-size: 24px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 30px;;
 }
 
 .news a:hover,
@@ -1428,7 +1403,7 @@ body > input[type="radio"] {
 .news-subscribe .subscribe {
   float: right;
 
-  padding: 6px;
+  padding: 5px 6px;
 
   color: #5a5a5a;
   border-radius: 15px;
@@ -1500,8 +1475,9 @@ body > input[type="radio"] {
 }
 
 .contacts-title {
+  width: 190px;
   margin: 0px;
-  width: 190px;
+
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
@@ -1825,29 +1801,30 @@ body > input[type="radio"] {
 .filters-fat label,
 .filters-fillers label
  {
+  position: relative;
+
+  margin: 0px;
+  padding-left: 31px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  margin: 0px;
-  position: relative;
-  padding-left: 31px;
 }
 
 .filters-fat input[type="radio"] + label::before,
 .filters-fillers input[type="checkbox"] + label::before
  {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
   display: inline-block;
 
   margin-right: 10px;
 
   content: "";
-  vertical-align: middle;
-
-  position: absolute;
-
-  left: 0;
-  top: 50%;
   transform: translate(0, -50%);
+  vertical-align: middle;
 }
 
 .filters-fat input[type="radio"] + label::before  {
@@ -1984,11 +1961,12 @@ body > input[type="radio"] {
 }
 
 .pages .page-back {
+  display: inline-block;
+
+  margin-top: 3px;
   margin-right: 10px;
-  margin-top: 3px;
 
   opacity: 0.2;
-  display: inline-block;
 }
 
 .pages .page-noactive {
@@ -1996,9 +1974,10 @@ body > input[type="radio"] {
 }
 
 .pages .page-foward {
-  margin-left: 10px;
-  margin-top: 3px;
   display: inline-block;
+
+  margin-top: 3px;
+  margin-left: 10px;
 }
 
 .pages .current-page {
@@ -2098,7 +2077,7 @@ body > input[type="radio"] {
   text-align: left;
   vertical-align: top;
 
-  font-size: 13px;
+  font-size: 0px;
   line-height: 18px;
 }
 
@@ -2107,8 +2086,11 @@ body > input[type="radio"] {
 }
 
 .footer-links-item a {
+  display: inline-block;
+
   margin-bottom: 5px;
 
+  vertical-align: top;
   text-decoration: none;
 
   color: #ffffff;
