@@ -2020,7 +2020,8 @@ body > input[type="radio"] {
 
   width: 32px;
   height: 32px;
-  margin-top: 20px;
+  margin-top: 21px;
+  margin-left: 1px;
   margin-right: 8px;
 
   vertical-align: top;
@@ -2088,7 +2089,7 @@ body > input[type="radio"] {
 .footer-links-item a {
   display: inline-block;
 
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   vertical-align: top;
   text-decoration: none;
@@ -2114,7 +2115,7 @@ body > input[type="radio"] {
 
 .footer-link-suppliers::before {
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: -22px;
 
   width: 15px;
@@ -2136,6 +2137,12 @@ body > input[type="radio"] {
 
   font-size: 12px;
   line-height: 18px;
+}
+
+.footer-copyright > a {
+  display: block;
+
+  padding-left: 2px;
 }
 
 .footer-copyright p a {
