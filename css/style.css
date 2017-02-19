@@ -793,7 +793,7 @@ img {
   padding-top: 10px;
 }
 
-.header-basket-container:hover .basket-modal-container {
+.basket-active-container:hover .basket-modal-container {
   display: block;
 }
 
