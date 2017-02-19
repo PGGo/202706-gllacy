@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -19,34 +19,34 @@
           </div>
 
           <nav class="header-nav">
-            <ul>
-              <li>
-                <a class="active-nav"><span class="link-nav">Каталог</span></a>
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a class="link-nav active-nav"><span class="link-text">Каталог</span></a>
                 <div class="sub-menu-container">
                   <ul class="sub-menu">
-                    <li>
+                    <li class="sub-menu-item">
                       <a href="#">Новинки</a>
                     </li>
-                    <li>
+                    <li class="sub-menu-item">
                       <a class="active-link">Сливочное</a>
                     </li>
-                    <li>
+                    <li class="sub-menu-item">
                       <a href="#">Щербеты</a>
                     </li>
-                    <li>
+                    <li class="sub-menu-item">
                       <a href="#">Фруктовый лед</a>
                     </li>
-                    <li>
+                    <li class="sub-menu-item">
                       <a href="#">Мелорин</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li>
-                <a href="#"><span class="link-nav">Доставка и оплата</span></a>
+              <li class="nav-list-item">
+                <a class="link-nav" href="#"><span class="link-text">Доставка и оплата</span></a>
               </li>
-              <li>
-                <a href="#"><span class="link-nav">О Компании</span></a>
+              <li class="nav-list-item">
+                <a class="link-nav" href="#"><span class="link-text">О Компании</span></a>
               </li>
             </ul>
           </nav>
@@ -136,7 +136,7 @@
           <form class="filters-form" action="index.html" method="post">
             <div class="filters-sorting">
               <label for="sorting">Сортировка:</label>
-              <select name="sorting" id="sorting">
+              <select class="sorting-select" name="sorting" id="sorting">
                 <option value="popular">по популярности</option>
                 <option value="cheap">сначала недорогие</option>
                 <option value="expensive">сначала дорогие</option>
@@ -145,8 +145,6 @@
             </div>
 
             <div class="filters-price">
-
-
               <div class="price-controls">
                 <label class="min-price">Цена:<input name="min-price" type="text" value="100">руб.</label>
                 <label class="max-price">&ndash;<input name="max-price" type="text" value="500">руб.</label>
@@ -158,26 +156,25 @@
                 <div class="toggle toggle-min"></div>
                 <div class="toggle toggle-max"></div>
               </div>
-
             </div>
 
             <div class="filters-fat">
               <b>Жирность:</b>
               <ul>
                 <li>
-                  <input type="radio" name="fat" value="0" id="0percent">
+                  <input class="radio" type="radio" name="fat" value="0" id="0percent">
                   <label for="0percent">0%</label>
                 </li>
                 <li>
-                  <input type="radio" name="fat" value="10" id="10percent">
+                  <input class="radio" type="radio" name="fat" value="10" id="10percent">
                   <label for="10percent">до 10%</label>
                 </li>
                 <li>
-                  <input type="radio" name="fat" value="30" id="30percent">
+                  <input class="radio" type="radio" name="fat" value="30" id="30percent">
                   <label for="30percent">до 30%</label>
                 </li>
                 <li>
-                  <input type="radio" name="fat" value="30+" id="30+percent">
+                  <input class="radio" type="radio" name="fat" value="30+" id="30+percent">
                   <label for="30+percent">выше 30%</label>
                 </li>
               </ul>
@@ -187,23 +184,23 @@
               <b>Наполнители:</b>
               <ul>
                 <li>
-                  <input type="checkbox" name="chocolate" id="chocolate" checked>
+                  <input class="checkbox" type="checkbox" name="chocolate" id="chocolate" checked>
                   <label for="chocolate">шоколадные</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="sugar" id="sugar" checked>
+                  <input class="checkbox" type="checkbox" name="sugar" id="sugar" checked>
                   <label for="sugar">сахарные присыпки</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="fruits" id="fruits">
+                  <input class="checkbox" type="checkbox" name="fruits" id="fruits">
                   <label for="fruits">фрукты</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="syrup" id="syrup">
+                  <input class="checkbox" type="checkbox" name="syrup" id="syrup">
                   <label for="syrup">сиропы</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="jam" id="jam">
+                  <input class="checkbox" type="checkbox" name="jam" id="jam">
                   <label for="jam">джемы</label>
                 </li>
               </ul>
@@ -339,11 +336,13 @@
               <img src="img/logo-htmlacademy.png" alt="HTML Academy" width="108" height="38"/>
             </a>
             <p>
-              Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017
+              Сделано в <a class="link-copyright" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017
             </p>
           </section>
         </div>
       </footer>
     </div>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>
